@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/teal_200"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalquestoes"
+        android:text="Questões no total"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/questao"
+        android:textStyle="bold"
+        android:text="Pergunta teste:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_margin="20dp"
+        android:layout_above="@+id/alternativas_layout"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/alternativas_layout"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resA"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:text="Resposta A"
+            android:textColor="@color/teal_700"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resB"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:text="Resposta B"
+            android:textColor="@color/teal_700"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resC"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:text="Resposta C"
+            android:textColor="@color/teal_700"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resD"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:text="Resposta D"
+            android:textColor="@color/teal_700"/>
+
+        
+    </LinearLayout>
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_submit"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/teal_700"
+        android:text="Confirmar"
+        android:layout_below="@id/alternativas_layout"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/questao"
+        android:layout_below="@+id/totalquestoes"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="-173dp"
+        android:layout_marginBottom="86dp"
+        android:layout_toStartOf="@+id/totalquestoes"
+        android:text="Cada questão vale 20 pontos :"
+        android:textAlignment="center" />
+
+</RelativeLayout>
